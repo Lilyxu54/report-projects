@@ -30,13 +30,13 @@
                     <span slot="title">报告管理</span>
                   </el-menu-item>
                 </router-link>
-                <router-link to="/about">
+                <router-link to="/airQuality">
                   <el-menu-item index="2">
                     <i class="el-icon-document"></i>
                     <span slot="title">空气质量报送管理</span>
                   </el-menu-item>
                 </router-link>
-                <router-link to="/about2">
+                <router-link to="/WorkNews">
                   <el-menu-item index="3">
                     <i class="el-icon-setting"></i>
                     <span slot="title">工作指导信息管理</span>
@@ -53,21 +53,34 @@
         </el-col>
       </el-row>
     </div>
-    <!-- <div id="nav">
-      
-    </div>-->
   </div>
 </template>
 
 <script>
+import { getreport } from "@/request/api";
+import { citylist } from "@/request/api";
 export default {
+  data() {
+    return {
+      namess:'111'
+    };
+  },
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
-    }
+    },
+    //   async  getComments() {
+    //   let data = await getreport();
+    //   console.log(data);
+    //   console.log(this.namess)
+    // }
+  },
+  created() {
+    // this.getComments();
+ 
   }
 };
 </script>
